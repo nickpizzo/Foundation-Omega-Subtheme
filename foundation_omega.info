@@ -15,6 +15,7 @@ stylesheets[all][] = css/foundation-omega.styles.css
 ; ========================================
 scripts[] = js/foundation-omega.behaviors.js
 scripts[] = js/foundation.js
+
 scripts[] = js/custom.js
 
 ; ========================================

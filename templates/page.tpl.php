@@ -72,6 +72,7 @@
 ?>
 <div class="l-page">
   <header class="l-header" role="banner">
+
     <div class="l-branding">
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
@@ -80,8 +81,40 @@
       <?php print render($page['branding']); ?>
     </div>
 
-    <?php print render($page['header']); ?>
+
+
     <?php print render($page['navigation']); ?>
+
+    <!-- Mobile Nav Bar -->
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div class="title-bar">
+        <div class="title-bar-left">
+          <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+          <span class="title-bar-title">Foundation title bar with top off-canvas</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Hidden Menu -->
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+      <!-- Close button -->
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <!-- Menu -->
+      <div class="super">
+      <ul class="vertical menu">
+        <li><a href="#">Foundation</a></li>
+        <li><a href="#">Dot</a></li>
+        <li><a href="#">ZURB</a></li>
+        <li><a href="#">Com</a></li>
+        <li><a href="#">Slash</a></li>
+        <li><a href="#">Sites</a></li>
+      </ul>
+      </div>
+
+    </div>
+
   </header>
 
   <div class="l-main">
