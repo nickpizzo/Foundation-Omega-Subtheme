@@ -77,11 +77,8 @@
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="site-logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
       <?php endif; ?>
-
       <?php print render($page['branding']); ?>
     </div>
-
-
 
     <?php print render($page['navigation']); ?>
 
@@ -96,17 +93,18 @@
     </div>
 
     <!-- Mobile Nav Hidden Menu -->
-    <div class="off-canvas position-top" id="offCanvas" data-off-canvas>
+    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
       <!-- Close button -->
       <button class="close-button" aria-label="Close menu" type="button" data-close>
         <span aria-hidden="true">&times;</span>
       </button>
       <!-- Menu -->
       <?php print render($page['navigation']); ?>
-
     </div>
-
   </header>
+
+  <?php print render($page['sidebar_first']); ?>
+  <?php print render($page['sidebar_second']); ?>
 
   <div class="l-main">
     <div class="l-content" role="main">
@@ -127,9 +125,6 @@
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
-
-    <?php print render($page['sidebar_first']); ?>
-    <?php print render($page['sidebar_second']); ?>
   </div>
 
   <footer class="l-footer" role="contentinfo">
